@@ -1,0 +1,2 @@
+baxter_robot:eight_queen:geo2tf
+-DCATKIN_DEVEL_PREFIX=/home/boyuan/VCLA/practice_ws/devel -DCMAKE_INSTALL_PREFIX=/home/boyuan/VCLA/practice_ws/install -G Unix Makefiles

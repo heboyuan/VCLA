@@ -1,0 +1,8 @@
+prefix=/home/boyuan/VCLA/practice_ws/devel
+
+Name: baxter_robot
+Description: Description of baxter_robot
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/boyuan/VCLA/practice_ws/devel/lib 
+Requires: 

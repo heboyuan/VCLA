@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+import matplotlib.pyplot as plt
+import sys
+import argparse
+
+parser = argparse.ArgumentParser(description='Optional app description')
+
+parser.add_argument('-s', '--save', action='store_true',
+                    help='save graph')
+parser.add_argument('-f', '--file_names', type=str, nargs='+',
+                    help='name of files want to draw', default=1, required=True)
+parser.add_argument('-t', '--title', type=str,
+                    help='title', default='graph')
+parser.add_argument('-xs', '--x_scale', type=float,
+                    help='scale x axis', default=1)
+parser.add_argument('-ys', '--y_scale', type=float,
+                    help='scale y axis', default=1)
+parser.add_argument('-x', '--x_label', type=str,
+                    help='label x axis', default='million frame')
+parser.add_argument('-y', '--y_label', type=str,
+                    help='label y axis', default='average game score')
+args = parser.parse_args()
+
+for f in args.file_names:
+    y = [float(line.rstrip('\n'))*args.y_scale for line in open(f)]
+    x = [i*args.x_scale for i in range(len(y))]
+    plt.plot(x,y)
+
+plt.title(args.title)
+plt.xlabel(args.x_label)
+plt.ylabel(args.y_label)
+
+if args.save:
+    plt.savefig(args.title+'.png')
+
+plt.show()

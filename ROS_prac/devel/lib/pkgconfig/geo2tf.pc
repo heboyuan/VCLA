@@ -1,0 +1,8 @@
+prefix=/home/boyuan/VCLA/practice_ws/devel
+
+Name: geo2tf
+Description: Description of geo2tf
+Version: 0.0.0
+Cflags: -I/home/boyuan/VCLA/practice_ws/devel/include
+Libs: -L/home/boyuan/VCLA/practice_ws/devel/lib 
+Requires: message_runtime

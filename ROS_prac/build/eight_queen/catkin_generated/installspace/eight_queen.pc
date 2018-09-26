@@ -1,0 +1,8 @@
+prefix=/home/boyuan/VCLA/practice_ws/install
+
+Name: eight_queen
+Description: Description of eight_queen
+Version: 0.0.0
+Cflags: -I/home/boyuan/VCLA/practice_ws/install/include
+Libs: -L/home/boyuan/VCLA/practice_ws/install/lib 
+Requires: message_runtime
